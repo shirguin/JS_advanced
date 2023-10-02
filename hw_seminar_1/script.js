@@ -93,9 +93,15 @@ dishes.set("Чизкейк", "Дмитрий");
 console.log(dishes);
 
 const orders = new Map();
-orders.set("Алексей", ["Пепперони", "Тирамису"]);
-orders.set("Мария", ["Калифорния", "Маргарита"]);
-orders.set("Ирина", ["Чизкейк"]);
+
+const alexey = { name: "Алексей" };
+orders.set(alexey, ["Пепперони", "Тирамису"]);
+
+const maria = { name: "Мария" };
+orders.set(maria, ["Калифорния", "Маргарита"]);
+
+const irina = { name: "Ирина" };
+orders.set(irina, ["Чизкейк"]);
 
 orders[Symbol.iterator] = function () {
   return {
@@ -111,4 +117,6 @@ orders[Symbol.iterator] = function () {
 
 console.log(orders);
 
-//Не понял следующее условие (В качестве ключей для клиентов используйте объекты.)
+for (let client of orders.keys()) {
+  console.log(`Клиент ${client.name} заказал: ${orders.get(client)}`);
+}

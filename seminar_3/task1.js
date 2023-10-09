@@ -25,11 +25,12 @@ const mockDatabase = [
 ];
 
 const btn = document.querySelector(".btn");
-const news = document.querySelector(".news-box");
+const news = document.querySelector(".content");
 
 btn.addEventListener("click", () => {
   btn.disabled = true;
   new Promise((resolve, reject) => {
+
     setTimeout(() => {
       const random = Math.floor(Math.random() * 10) + 1;
       console.log(random);
@@ -40,6 +41,7 @@ btn.addEventListener("click", () => {
       }
     }, 2000);
   })
+  
     .then((resolve) => {
       resolve.forEach((element) => {
         const listItem = document.createElement("li");

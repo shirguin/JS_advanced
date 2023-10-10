@@ -16,12 +16,6 @@ const addCommentBtnEl = document.querySelector(".addCommentBtn");
 const inputProductEl = document.querySelector(".inputProduct");
 const inputTextEl = document.querySelector(".inputText");
 const ErrorEl = document.querySelector(".addError");
-const contentEl = document.querySelector(".content");
-
-if (localStorage.length > 0){
-    let products = getProducts();
-    console.log(`Товары: ${products}`);
-}
 
 addCommentBtnEl.addEventListener("click", () => {
   let product = inputProductEl.value;
@@ -42,16 +36,3 @@ addCommentBtnEl.addEventListener("click", () => {
   }
 
 });
-
-function getProducts(){
-    let products = [];
-    for(let i=0; i < localStorage.length; i++){
-        let key = localStorage.key(i);
-        products.push({key: key, value: JSON.parse(localStorage.getItem(key))});
-    }
-
-    console.log(products);
-    return products;
-}
-
-

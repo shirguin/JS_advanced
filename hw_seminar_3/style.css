@@ -1,20 +1,47 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(239, 227, 190);
 }
 
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
 
 .center {
-    padding-left: calc(50% - 570px);
-    padding-right: calc(50% - 570px);
+  padding-left: calc(50% - 570px);
+  padding-right: calc(50% - 570px);
 }
 
 .title {
-    color: rgb(2, 49, 49);
-    margin-top: 100px;
+  color: rgb(2, 49, 49);
+  margin-top: 100px;
+}
+
+.button {
+  text-decoration: none;
+  color: rgb(2, 49, 49);
+  background-color: rgb(239, 227, 190);
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid rgb(2, 49, 49);
+}
+
+.button:hover {
+  background-color: rgb(2, 49, 49);
+  color: rgb(239, 227, 190);
+}
+
+.inputProduct {
+    font-size: 16px;
+}
+
+.inputText {
+    font-size: 16px;
 }

@@ -15,7 +15,7 @@
 const addCommentBtnEl = document.querySelector(".addCommentBtn");
 const inputProductEl = document.querySelector(".inputProduct");
 const inputTextEl = document.querySelector(".inputText");
-const ErrorEl = document.querySelector(".addError");
+const ErrorEl = document.querySelector(".error");
 
 addCommentBtnEl.addEventListener("click", () => {
   let product = inputProductEl.value;
